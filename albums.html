@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--LINK DE BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+        <div id="app" class="container">
+            <br>
+            <h1>Álbumes musicales</h1>
+
+            <a class="btn btn-primary" href="album_nuevo.html">Añadir álbum</a>
+            <section v="if="error>Se produjo un error al añadir el álbum de música</section>
+            <section v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando álbum musical...</p>
+                </section>
+                <section v-else>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Banda</th>
+                                    <th scope="col">Album</th>
+                                    <th scope="col">Generos</th>
+                                    <th scope="col">Pais</th>
+                                    <th scope="col">Año</th>
+                                    <th scope="col">Imagen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="producto in producto" class="">
+                                    <td scope="row">{{producto.id}}</td>
+                                    <td scope="row">{{producto.banda}}</td>
+                                    <td scope="row">{{producto.album}}</td>
+                                    <td scope="row">{{producto.generos}}</td>
+                                    <td scope="row">{{producto.pais}}</td>
+                                    <td scope="row">{{producto.año}}</td>
+                                    <td>
+                                        <img width="60": src="producto.imagen" 
+                                        alt="producto.album">
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)">Eliminar</button>
+
+                                        <a class="btn btn-primary" :href="'album_editar.html?id='+ producto.id+'&banda=' 
+                                        +producto.banda+ '&album='+producto.album+'&generos='
+                                        +producto.generos +  '&pais='+producto.pais + '&año='
+                                        +producto.año + '&imagen='+producto.imagen" >Editar álbum</a>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <!--SCRIPTS DE BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <!--SCRIPTS DE VUE-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" 
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--SCRIPT AL JS-->
+    <script src="JS/main.js"></script>
+    <script src="JS/albums.js"></script>
+    
+</body>
+</html>

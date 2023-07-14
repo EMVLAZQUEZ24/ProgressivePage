@@ -1,0 +1,73 @@
+/*Reiniciando los margenes y bordes*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(rgba(188, 203, 203, 0.861), grey, rgba(164, 208, 208, 0.876), white, lightblue);
+    font-family: 'Rasa', serif;
+    padding: 5px;
+    margin:5px;
+    width: auto;
+    height: auto;
+}
+
+/*P, H3 y h5*/
+h3{
+    font-size: 20px;
+    text-align: center;
+}
+h5{
+    font-size: 22px;
+    text-align: center;
+}
+p{
+    font-size: 25px;
+}
+
+/*FLEX*/
+.flex{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+}
+.flexbox{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+/*IMG*/
+img{
+    width: 100%;
+    height: 100%;
+}
+
+/*SECCIONES*/
+#about{
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+   
+}
+#albums{
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    
+}
+#hystory{
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    
+}
+#contact{
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    
+}
