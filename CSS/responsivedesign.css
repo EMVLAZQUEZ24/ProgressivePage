@@ -46,8 +46,8 @@
     body{
         padding: 0;
         margin: 0;
-        width: min-content;
-        height: min-content;
+        width: max-content;
+        height: max-content;
     }
     a{
         font-size: 14px;
@@ -68,40 +68,6 @@
      
 }
 
-/*PARA UN TAMAÑO DE 1080px X 1920px*/
-@media only screen and (max-width: 1920px) and
-(min-width: 1080px){
-    *{
-        padding: 0;
-        margin: 0;
-        
-    }
-    body{
-        padding: 0;
-        margin: 0;
-        width: min-content;
-        height: min-content;
-    }
 
-    img{
-        width: 100%;
-    }
-
-    h3{
-        font-size: 20px;
-    }
-    h5{
-        font-size: 30px;
-    }
-    p{
-        font-size: 40px;
-        text-align: end;
-    }
-
-    /* #albums{
-        width: fit-content;
-        height: fit-content;
-    }    */
-}
 
 
